@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+		<title>Juniorbird.com &mdash; <$mt:EntryTitle$></title>
+		
+		<$mt:Include module="HTML Head"$>
+
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1><$mt:EntryTitle$></h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				<p class="date">Published <$mt:EntryDate format="%b %e, %Y"$></p>
+			
+				<$mt:EntryTrackbackData$>
+				
+				<$mt:EntryBody$>
+				
+				<$mt:EntryMore$>
+				
+				<$mt:Include module="TrackBacks"$>
+
+				<$mt:Include module="Comments"$>
+			
+			</div>
+			
+			<div id="navbar">
+				<p class="prevnext"><mt:EntryPrevious>Previous: <a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a></mt:EntryPrevious></p>
+				<p class="prevnext"><mt:EntryNext>Next: <a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a></mt:EntryNext></p>
+				
+				<p>More in <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryCategories></p>										
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>

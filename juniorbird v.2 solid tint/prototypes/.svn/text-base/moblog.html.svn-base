@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="generator" content="Adobe GoLive" />
+		<title>Juniorbird.com &mdash; <?php include "title/index.html"?></title>
+		
+		<script src="popmoblog.js" type="text/javascript"></script>
+		
+		<style type="text/css">
+			@import "moblog.css";
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+			<div class="banner">
+				<div id="home">
+					<a href="index.html"><img src="junior.gif" alt="Juniorbird.com"></a>
+				</div>
+				
+				<div class="formozilla"></div>
+			</div>
+			
+			
+			<div class="month">
+		
+			<div class="photos">
+				<a href="fotos/fueradeservicio.jpg" onclick="showoriginal(this.href,'portrait');return false;"><img src="fotos/fueradeservicio_sm.jpg"></a>
+				<a href="fotos/sea.jpg" onclick="showoriginal(this.href,'landscape');return false;"><img src="fotos/sea_sm.jpg"></a>
+				<a href="fotos/toilette.jpg" onclick="showoriginal(this.href,'poopy');return false;"><img src="fotos/toilette_sm.jpg"></a>
+			</div>
+		
+			<div class="date">
+				<h2>May 2006</h2>
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+			<div class="month">
+		
+			<div class="photos">
+				<a href="fotos/abierto.jpg" onclick="showoriginal(this.href,'portrait');return false;"><img src="fotos/abierto_sm.jpg"></a>
+				<a href="fotos/seatback.jpg" onclick="showoriginal(this.href,'landscape');return false;"><img src="fotos/seatback_sm.jpg"></a>
+			</div>
+		
+			<div class="date">
+				<h2>December 2006</h2>
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+	
+	</div>
+	
+	</body>
+</html>

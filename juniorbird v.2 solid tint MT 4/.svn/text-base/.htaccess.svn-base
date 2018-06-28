@@ -1,0 +1,53 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+DirectoryIndex index.php index.html index.xml mt.cgi
+
+# Rewrite links from old master RSS to new diary-only RSS
+Redirect /rss/index.xml http://juniorbird.com/index.xml [r=301,nc]
+Redirect /rss/index.rdf http://juniorbird.com/index.xml [r=301,nc]
+Redirect /rss/atom.xml http://juniorbird.com/atom.xml [r=301,nc]
+Redirect /rss/ http://juniorbird.com/index.xml [r=301,nc]
+
+# Rewrite links from unmaintained index.rdf, RSS 0.9, which I don't feel like dealing with
+Redirect /index.rdf http://juniorbird.com/index.xml [r=301,nc]
+
+# Redirect link from very old moblog archive page to new moblog archive page
+Redirect /foto/archives.html http://juniorbird.com/foto/fotoarchive.php [r=301,nc]
+
+# Oops, typo in old redirect
+Redirect /atom.xml[r=301,nc] http://juniorbird.com/atom.xml
+
+# Rewrite links from old .php individual archives to new .html individual archives
+RewriteRule ^archive/(.*).php(.*) http://juniorbird.com/archive/$1.html$2 [r=301,nc]
+
+# Rewrite links from very old /archives archives to new /archive archives
+RewriteRule ^archives/(.*).html(.*) http://juniorbird.com/archive/$1.html$2 [r=301,nc]
+RewriteRule ^archives/(.*).php(.*) http://juniorbird.com/archive/$1.html$2 [r=301,nc]
+
+# Get rid of annoying log spam and bots
+SetEnvIfNoCase Request_URI mt-tb\.cgi no_ping
+Order Deny,Allow
+Deny from env=no_ping
+
+SetEnvIfNoCase Referer ".*(casino|gambling|poker|porn|sex|nude|xxx|hilton|pics|video|profit|credit|doobu|mortgage|phentermine|ambien|viagra).*" BadReferrer order deny,allow deny from env=BadReferrer
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla.*NEWT [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Crescent [OR]
+RewriteCond %{HTTP_USER_AGENT} ^CherryPicker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^[Ww]eb[Bb]andit [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebEMailExtrac.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NICErsPRO [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Teleport [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Microsoft.URL [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Wget [OR]
+RewriteCond %{HTTP_USER_AGENT} ^LinkWalker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^sitecheck.internetseer.com [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ia_archiver [OR]
+RewriteCond %{HTTP_USER_AGENT} ^DIIbot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^psbot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailCollector
+RewriteRule ^.* - [F] 

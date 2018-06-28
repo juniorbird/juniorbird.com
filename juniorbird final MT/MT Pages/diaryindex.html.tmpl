@@ -1,0 +1,48 @@
+<div id="latest">
+	<mt:Entries lastn="1">
+	
+	
+		<mt:IfCategory name="Elsewhere">
+				
+				<h3><$mt:EntryTitle$></h3>
+				<p class="date"><$mt:EntryDate format="%b %e, %Y"$> in <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryCategories></p>
+				
+				<mt:Textile><$mt:EntryBody$><a href="<$mt:EntryExcerpt$>">Read on...</a></mt:Textile>
+			
+				<mt:Else>
+	
+				<h3><$mt:EntryTitle$></h3>
+				<p class="date"><$mt:EntryDate format="%b %e, %Y"$> in <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryCategories></p>
+			    	
+				<mt:Textile><$mt:EntryExcerpt words="300"$> <a href="<$mt:EntryLink$>">Read on...</a></mt:Textile>
+				
+		</mt:IfCategory>
+		
+	</mt:Entries>
+		
+	</div>
+
+  
+ <div id="older">
+
+		<mt:Entries lastn="5" offset="1">
+			
+			<mt:IfCategory name="Elsewhere">
+				
+				<h3><$mt:EntryTitle$></h3>
+				<p class="date"><$mt:EntryDate format="%b %e, %Y"$> in <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryCategories></p>
+				
+				<mt:Textile><$mt:EntryBody$><a href="<$mt:EntryExcerpt$>">Read on...</a></mt:Textile>
+			
+				<mt:Else>
+	
+				<h3><$mt:EntryTitle$></h3>
+				<p class="date"><$mt:EntryDate format="%b %e, %Y"$> in <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryCategories></p>
+			    	
+				<mt:Textile><$mt:EntryExcerpt words="300"$> <a href="<$mt:EntryLink$>">Read on...</a></mt:Textile>
+				
+			</mt:IfCategory>
+				
+		</mt:Entries>
+		
+</div>

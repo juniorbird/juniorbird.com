@@ -1,0 +1,207 @@
+#banner
+	{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 35px;
+	position: relative;
+	}
+
+#logo
+	{
+	float: left;
+	}
+	
+#logo, #moblog
+	{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	}
+
+#logo h1, #logo h1 img, #moblog img, #moblog a
+	{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	line-height: 0px;
+	text-decoration: none;
+	}
+	
+#moblog a, moblog img
+	{
+	font-size: 0px;
+	}
+
+#moblog a:hover
+	{
+	border-bottom: 2px solid #fffb32;
+	}
+	
+#content
+	{
+	position: relative;
+	border: 0px;
+	margin-top: 20px;
+	padding: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+#content .googlead
+	{
+	margin-top: 45px;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	}
+
+/* the diary goes on the left*/
+#diary
+	{
+	float: left;
+	border: 0px;
+	padding: 10px;
+	padding-left: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 63%
+	}
+	
+#diary #older
+	{
+	margin-top: 55px;
+	}
+	
+#diary #older h3
+	{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	}
+	
+#diary #older .date
+	{
+	margin: 0px;
+	padding: 0px;
+	}
+
+#diary #older p
+	{
+	margin: 0px;
+	padding: 0px;
+	}
+
+/* the blog goes on the right */	
+#blog
+	{
+	float: right;
+	border: 0px;
+	padding: 10px;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	width: 30%
+	}
+	
+#blog p
+	{
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#blog h3
+	{
+	margin-bottom: 3px;
+	padding-bottom: 3px;
+	}
+
+#blog .date
+	{
+	margin-bottom: 35px;
+	}
+	
+#diary h2, #blog h3
+	{
+	margin-top: 0px;
+	padding-top: 0px;
+	}
+
+#footer
+	{
+	border: 0px;
+	padding-top: 10px;
+	position: relative;
+	clear: both;
+	}
+	
+/* the archives are leftmost */	
+#archives
+	{
+	border: 0px;
+	padding: 0px;
+	float: left;
+	width: 30%
+	}
+
+/* the links are in the middle */	
+#links
+	{
+	border: 0px;
+	padding: 0px;
+	float: left;
+	margin-right: 44px;
+	margin-left: 48px;
+	width: 30%
+	}
+	
+#notaframe
+	{
+	margin-top: 7px;
+	overflow: auto;
+	overflow-y: scroll;
+	overflow:-moz-scrollbars-vertical;
+	padding: 0px;
+	height: 207px;
+	}
+
+#notaframe h4
+	{
+	margin-bottom: 5px;
+	margin-top: 0px;
+	}
+
+#notaframe ul	
+	{
+	list-style: none;
+	margin: 0px;
+	margin-bottom: 25px;
+	padding-left: 0px;
+	}
+	
+/* crap that's neither of the two preceeding goes on the right */	
+#badges
+	{
+	border: 0px;
+	padding: 0px;
+	float: left;
+	width: 29%
+	}
+	
+#archives p, #links p, #badges p
+	{
+	margin: 0px;
+	padding: 0px; 
+	}
+
+#archives h3, #links h3, #badges h3
+	{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	}
+
+#archives form
+	{
+	margin-top: 0px;
+	margin-bottom: 27px;
+	}

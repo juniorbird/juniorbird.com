@@ -1,0 +1,54 @@
+8
+
+dir
+6
+http://juniorbird@svn.cleverbird.com/sites/trunk/juniorbird.%20com/juniorbird%20v.2%20solid%20tint/images/badman
+http://juniorbird@svn.cleverbird.com/sites
+
+
+
+2007-12-03T01:23:27.503958Z
+6
+juniorbird
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+07ff48ac-5440-0410-9b51-ca57e0c01319
+
+without.jpg
+file
+
+
+
+
+2007-12-08T17:19:37.000000Z
+fa89ca4f001d51f0bcdf1c764b7d254b
+2007-12-03T01:23:27.503958Z
+6
+juniorbird
+has-props
+
+with.jpg
+file
+
+
+
+
+2007-12-08T17:19:37.000000Z
+b024fd522acfb1c57dbfef7a9627ecf6
+2007-12-03T01:23:27.503958Z
+6
+juniorbird
+has-props
+

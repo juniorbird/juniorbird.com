@@ -1,0 +1,42 @@
+.photos img
+	{
+	display: block;
+	margin: 0px;
+	pading: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	border-left: 2px solid #333;
+	}
+	
+a:hover img
+	{
+	border: none;
+	border-left: 2px solid #fffb32;
+	}
+	
+.month
+	{
+	position: relative;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+.photos
+	{
+	float: left;
+	width: 33%;
+	}
+	
+.date
+	{
+	float: right;
+	width: 61%;
+	}
+	
+h2
+	{
+	margin: 0px;
+	padding: 0px;
+	}

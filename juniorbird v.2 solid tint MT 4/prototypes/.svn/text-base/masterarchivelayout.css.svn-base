@@ -1,0 +1,25 @@
+	
+#diary
+	{
+	float: left;
+	width: 48%;
+	}
+	
+#blog
+	{
+	float: right;
+	width: 48%;
+	}
+	
+#footer
+	{
+	clear: both;
+	text-align: center;
+	margin-right: 120px;
+	padding-top: 35px;
+	}
+	
+#googlead
+	{
+	margin-bottom: 45px;
+	}

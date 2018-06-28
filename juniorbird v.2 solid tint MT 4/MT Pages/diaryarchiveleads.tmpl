@@ -1,0 +1,10 @@
+<mt:EntryIfExtended>
+
+  <mt:Textile><$mt:EntryBody$> <a href="<$mt:EntryLink$>">Read on...</a><mt:If tag="EntryCommentCount" gt "0"> (<a href="<$mt:EntryLink$>#comments">plus <MTEntryCommentCount> Comments</a>)</mt:If></mt:Textile>
+
+<mt:Else>
+  
+    
+    <mt:Textile><$mt:EntryExcerpt words="550"$> <a href="<$mt:EntryLink$>">Read on...</a><mt:If tag="EntryCommentCount" gt "0"> (<a href="<$mt:EntryLink$>#comments">plus <MT:EntryCommentCount> Comments</a>)</mt:If></mt:Textile>
+
+</mt:EntryIfExtended>

@@ -1,0 +1,13 @@
+				<h3>By Category:</h3>
+				<ul>
+					<MTTopLevelCategories>
+					<li><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></li>
+					</MTTopLevelCategories>
+				</ul>
+				
+				<h3>By Date:</h3>
+				<ul>
+					<MTArchiveList archive_type="Monthly">
+					<li><a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+					</MTArchiveList>
+				</ul>

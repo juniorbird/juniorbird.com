@@ -1,0 +1,2 @@
+# We need to have index.php be our first page, not index.html (because juniordiary will output index.html as its index page and then we'll unify it all in index.php)
+DirectoryIndex index.php index.html mt.cgi

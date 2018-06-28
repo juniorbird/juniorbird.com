@@ -1,0 +1,109 @@
+/* This file includes only the visual styling -- fonts, colors, etc.*/
+
+body
+	{
+	background: #333;
+	color: #fff;
+	font-family: georgia, times, times new roman;
+	font-size: 20px;
+	}
+	
+p, ul, li
+	{
+	font-size: 1em;
+	line-height: 1.4em;
+	}
+	
+h3
+	{
+	font-size: 1.2 em;
+	line-height: 1.68 em;
+	}
+	
+h2
+	{
+	font-size: 1.44 em;
+	line-height: 2.02 em;
+	}
+	
+h1
+	{
+	font-size: 1.68 em;
+	line-height: 2.42 em;
+	margin-top: 0px;
+	padding-top: 0px;
+	}	
+
+h1, h2, h3, h4
+	{
+	color: #cefff3;
+	}
+	 
+a:link
+	{
+	color: #fefc93;
+	}
+	
+a:visited
+	{
+	color: #fffec8;
+	}
+	
+a:hover
+	{
+	color: #fffb32;
+	}
+	
+
+.via
+	{
+	font-style: italic;
+	}
+	
+img
+	{
+	border: none;
+	}
+	
+p.footnote
+	{
+	font-size: smaller;
+	margin-left: 15px;
+	margin-top: 5px;
+	}
+	
+sup.footnote
+	{
+	font-size: 0.6em;
+	}
+	
+h2.sup.footnote, h1.sup.footnote
+	{
+	font-size: 0.3em;
+	}
+	
+/* Here we're trying to format images that are inline with entries but on their own line, not in a para */
+
+p a img
+	{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 2px;
+	padding-left: 2px;
+	text-align: center;
+	}
+
+p a:hover img
+	{
+	border-left: 2px solid #fffb32;
+	}
+
+/* Override for the icons from the TypeKey profile */
+.comment p a img
+	{
+	display: inline;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	}

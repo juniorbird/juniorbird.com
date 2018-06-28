@@ -1,0 +1,5 @@
+		<MTEntries>
+			<h3><$MTEntryTitle$></h3>
+   			<p class="date"><a href="<$MTEntryPermalink$>"><$MTEntryDate format="%b %e, %Y"$></a> in <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories></p>
+ 			<MTTextile><$MTEntryExcerpt$> <a href="<$MTEntryLink$>">Read on...</a><MTEntryIfComments> (<a href="<$MTEntryLink$>#comments">plus <MTEntryCommentCount> Comments</a>)</MTEntryIfComments></MTTextile>
+ 		</MTEntries>

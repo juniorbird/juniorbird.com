@@ -1,0 +1,11 @@
+<MTEntryIfExcerpt>
+
+	<MTTextile><$MTEntryBody$><a href="<$MTEntryExcerpt$>">Read on...</a></MTTextile>
+
+<MTElse>
+	
+	<MTInclude module="Archive Lead Template">
+
+</MTElse>
+
+</MTEntryIfExcerpt>

@@ -1,0 +1,8 @@
+/* First we import the fonts, colors, etc. we use everywhere*/
+@import 'juniorlook.css';
+
+/* Then we import the basic layout basis of all pages */
+@import 'juniorlayout.css';
+
+/* Finally we import the specific layout for this page */
+@import 'homelayout.css';

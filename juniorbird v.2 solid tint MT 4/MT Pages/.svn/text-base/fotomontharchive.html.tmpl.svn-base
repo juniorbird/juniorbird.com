@@ -1,0 +1,15 @@
+		<div class="month">
+	
+			<div class="photos">
+				<MTEntries>
+					<MTEntryIfExtended><a href="/foto/fotos/<$MTEntryMore convert_breaks="0"$>" onclick="showoriginal(this.href,'<$MTEntryExcerpt convert_breaks="0"$>');return false;"></MTEntryIfExtended><img src="/foto/fotos/<$MTEntryBody convert_breaks="0"$>" alt="<$MTEntryTitle convert_breaks="0" $>" /><MTEntryIfExtended></a></MTEntryIfExtended>
+				</MTEntries>
+			</div>
+		
+			<div class="date">
+				<h2><$MTArchiveDate format="%B %Y"$></h2>
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>

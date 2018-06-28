@@ -1,0 +1,21 @@
+<MTEntryIfExtended>
+
+  <MTTextile><$MTEntryBody$> <a href="<$MTEntryLink$>">Read on...</a><MTEntryIfComments> (<a href="<$MTEntryLink$>#comments">plus <MTEntryCommentCount> Comments</a>)</MTEntryIfComments></MTTextile>
+
+	<MTElse>
+  
+    <MTEntryIfExcerpt>
+    
+    <MTTextile><$MTEntryExcerpt$> <a href="<$MTEntryLink$>">Read on...</a><MTEntryIfComments> (<a href="<$MTEntryLink$>#comments">plus <MTEntryCommentCount> Comments</a>)</MTEntryIfComments></MTTextile>
+    
+    <MTElse>
+    	
+  		<MTTextile><$MTEntryBody TrimWordsbyLen="+550"$> <a href="<$MTEntryLink$>">Read on...</a><MTEntryIfComments> (<a href="<$MTEntryLink$>#comments">plus <MTEntryCommentCount> Comments</a>)</MTEntryIfComments></MTTextile> 
+						
+    </MTElse>
+    
+    </MTEntryIfExcerpt>
+  
+ 	</MTElse>
+
+</MTEntryIfExtended>

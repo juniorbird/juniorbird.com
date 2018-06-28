@@ -1,0 +1,8 @@
+<MTEntries  lastn="7">
+	
+	<h3><a name="<$MTEntryID pad="1"$>"></a><a href="<$MTEntryBody convert_breaks="0" $>"><$MTEntryTitle$></a></h3>
+	<MTTextile><$MTEntryMore$></MTTextile>
+	<MTEntryIfExcerpt><p class="via">Via <a href="<$MTEntryKeywords$>"><$MTEntryExcerpt$></a></p></MTEntryIfExcerpt>
+	<p class="date"><a href="<$MTEntryLink archive_type="Monthly"$>#<$MTEntryID pad="1"$>"><$MTEntryDate format="%b %e, %Y"$></a> in <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories><MTIfCommentsActive><MTEntryIfCommentsOpen> | <a href="/blog/archive/<$MTEntryID pad="1"$>_comments.html" onclick="popcomment(this.href);return false;">Comment<MTEntryIfComments> (<MTEntryCommentCount>)</MTEntryIfComments></a></MTEntryIfCommentsOpen></MTIfCommentsActive></p>
+
+</MTEntries>

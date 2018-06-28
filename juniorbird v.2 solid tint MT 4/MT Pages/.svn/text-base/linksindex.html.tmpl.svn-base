@@ -1,0 +1,8 @@
+<MTCategories>
+<h4><$MTCategoryLabel$></h4>
+<ul>
+	<MTEntries sort_by="title" sort_order="ascend">
+  	<li><a href="<$MTEntryBody convert_breaks="0"$>"><$MTEntryTitle$></a></li>
+  </MTEntries>
+</ul>
+</MTCategories>

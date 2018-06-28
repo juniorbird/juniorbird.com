@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="generator" content="Adobe GoLive" />
+		<title>Juniorbird.com &mdash; <$MTArchiveCategory$> Archives</title>
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<script type="text/javascript" src="<$mt:Link template="javascript"$>"></script>
+		
+		<style type="text/css">
+			@import '/css/diaryarchive.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1>Archive: <$MTArchiveCategory$></h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+			
+				<mt:Entries>
+					<mt:IfCategory name="Elsewhere">
+				
+							<$mt:Include module="Latest Title"$>
+							
+							<$mt:Include module="Elsewhere Lead Template"$>
+						
+							<mt:Else>
+				
+							<$mt:Include module="Latest Title"$>
+								
+							<$mt:Include module="Archive Lead Template"$>
+							
+					</mt:IfCategory>			
+				</mt:Entries>
+				    				
+			</div>
+			
+			<div id="navbar">
+				<p>&nbsp;</p>
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<div id="latest">
+	<mt:Entries lastn="1">
+	
+	
+		<mt:IfCategory name="Elsewhere">
+				
+				<$mt:Include module="Latest Title"$>
+				
+				<$mt:Include module="Elsewhere Lead Template"$>
+			
+				<mt:Else>
+	
+				<$mt:Include module="Latest Title"$>
+			    	
+				<$mt:Include module="Archive Lead Template"$>
+				
+		</mt:IfCategory>
+		
+	</mt:Entries>
+		
+	</div>
+
+  
+ <div id="older">
+
+		<mt:Entries lastn="5" offset="1">
+			
+			<mt:IfCategory name="Elsewhere">
+				
+				<$mt:Include module="Older Title"$>
+				
+				<$mt:Include module="Elsewhere Lead Template"$>
+			
+				<mt:Else>
+	
+				<$mt:Include module="Older Title"$>
+			    	
+				<$mt:Include module="Archive Lead Template"$>
+				
+			</mt:IfCategory>
+				
+		</mt:Entries>
+		
+</div>

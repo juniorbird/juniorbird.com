@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="generator" content="Adobe GoLive" />
+		<title>Juniorbird.com &mdash; Comment on <$MTEntryTitle$></title>
+		
+		<script src="/js/mtscripts.js" type="text/javascript"></script>
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/blogcomment.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+				
+				<MTIfCommentsActive>
+                     <div id="comments" class="comments">
+                        <div class="comments-content">
+                           <MTComments>
+                           <MTCommentsHeader><h2 class="comments-header">Comments</h2></MTCommentsHeader>
+                           <a id="c<$MTCommentID pad="1"$>"></a>
+                           <div class="comment" id="comment-<$MTCommentID$>">
+                              <div class="comment-content">
+                                 <$MTCommentBody$>
+                              </div>
+                              <p class="comment-footer">
+                                 Posted by:
+                                 <$MTCommentAuthorLink default_name="Anonymous"$> <$MTCommentAuthorIdentity$> |
+                                 <a href="#comment-<$MTCommentID$>"><$MTCommentDate$></a>
+                              </p>
+                           </div>
+                           </MTComments>
+                        </div>
+						
+						<h3>Add a Comment</h3>
+						<p>(Use HTML or <a href="http://bradchoate.com/mt/docs/mtmanual_textile2.html">Textile</a> shortcuts for formatting.)</p>
+                        <MTCommentFields static="1">
+                     </div>
+                     </MTIfCommentsActive>			
+
+		</div>
+
+</body>
+
+</html>

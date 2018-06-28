@@ -1,0 +1,55 @@
+#where
+	{
+	float: left;
+	width: 615px;
+	text-align: left;
+	margin-top: 100px;
+	}
+	
+#home
+	{
+	float: right;
+	width: 225px;
+	vertical-align: middle;
+	}
+	
+#home a img
+	{
+	border: none;
+	}
+	
+#words
+	{
+	float: left;
+	width: 615px;
+	margin-right: 63px;
+	}
+
+#navbar
+	{
+	float: right;
+	width: 225px;
+	}
+	
+#content
+	{
+	margin-top: 0px;
+	margin-bottom: 10px;
+	}
+	
+#banner
+	{
+	margin-bottom: 0px;
+	}
+	
+#navbar #googlead
+	{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 75px;
+	}
+	
+.date
+	{
+	font-style: italic;
+	}

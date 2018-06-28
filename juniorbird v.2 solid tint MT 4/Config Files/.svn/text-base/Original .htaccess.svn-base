@@ -1,0 +1,80 @@
+# We need to have index.php be our first page, not index.html (because juniordiary will output index.html as its index page and then we'll unify it all in index.php)
+DirectoryIndex index.php index.html mt.cgi
+
+Options +FollowSymlinks
+RewriteEngine on
+
+# Rewrite links from old, blog-component archives, to new all-in-one archives
+RewriteRule ^archives/(.*).html(.*) http://juniorbird.com/archive/$1.php$2 [r=301,nc]
+RewriteRule ^blog/archives/(.*).html(.*) http://juniorbird.com/archive/$1.php$2 [r=301,nc]
+RewriteRule ^foto/archives/(.*).html(.*) http://juniorbird.com/archive/$1.php$2 [r=301,nc]
+RewriteRule ^archives/(.*) http://juniorbird.com/archive/$1 [r=301,nc]
+
+# Rewrite links from RSS to new master archive pages -- know if they're from RSS by watching the flag on the incoming URL
+RewriteRule ^blog/archive/(.*?).php(.*?)rss http://juniorbird.com/archive/$1.php$2 [r=301,nc]
+
+# Nobody should be using my bookmarks file anymore, not sure why it's so popular
+Redirect /bookmarks.html http://juniorbird.com/index.php
+
+# Redirect from blog-component RSS to master RSS
+Redirect /index.xml http://juniorbird.com/rss/index.xml [r=301,nc]
+Redirect /index.rdf http://juniorbird.com/rss/index.rdf [r=301,nc]
+Redirect /atom.xml http://juniorbird.com/rss/atom.xml[r=301,nc]
+
+# Redirect from individual linkblog archives to master merged pages
+Redirect /archive/cat_mac_stff.php http://juniorbird.com/archive/cat_mac.php
+Redirect /archive/cat_win_stuff.php http://juniorbird.com/archive/cat_switch.php
+Redirect /archive/cat_firefoxy.php http://juniorbird.com/archive/cat_tech.php
+Redirect /archive/cat_palm_stuff.php http://juniorbird.com/archive/cat_tech.php
+Redirect /archive/cat_win_stuff.php http://juniorbird.com/archive/cat_switch.php
+Redirect /archive/cat_da_web.php http://juniorbird.com/archive/cat_tech.php
+
+Redirect /archive/cat_politics.php http://juniorbird.com/archive/cat_ye_olde_politicks.php
+Redirect /archive/cat_breaking_news.php http://juniorbird.com/archive/cat_ye_olde_politicks.php
+
+Redirect /archive/cat_great_literature.php http://juniorbird.com/archive/cat_true_life_stories.php
+Redirect /archive/cat_absurdity.php http://juniorbird.com/archive/cat_true_life_stories.php
+Redirect /archive/cat_consumer_lust.php http://juniorbird.com/archive/cat_true_life_stories.php
+Redirect /archive/cat_things_i_might_do.php http://juniorbird.com/archive/cat_true_life_stories.php
+
+Redirect /archive/cat_movable_type.php http://juniorbird.com/archive/cat_meta.php
+Redirect /archive/cat_blogsturbation.php http://juniorbird.com/archive/cat_meta.php
+
+Redirect /archive/cat_47_wonders_of_the_world.php http://juniorbird.com/archive/cat_otherwise_uncategorized.php
+Redirect /archive/cat_trivia.php http://juniorbird.com/archive/cat_otherwise_uncategorized.php
+Redirect /archive/cat_test_your_knowledge.php http://juniorbird.com/archive/cat_otherwise_uncategorized.php
+
+Redirect /archive/cat_dont_miss_this_great_offer.php http://juniorbird.com/archive/cat_bidness.php
+Redirect /archive/cat_biz.php http://juniorbird.com/archive/cat_bidness.php
+Redirect /archive/cat_brilliant_ideas.php http://juniorbird.com/archive/cat_bidness.php
+Redirect /archive/cat_making_good_stuff.php http://juniorbird.com/archive/cat_bidness.php
+
+
+
+
+# Get rid of annoying log spam and bots
+SetEnvIfNoCase Request_URI mt-tb\.cgi no_ping
+Order Deny,Allow
+Deny from env=no_ping
+
+SetEnvIfNoCase Referer ".*(casino|gambling|poker|porn|sex|nude|xxx|hilton|pics|video|profit|credit|doobu|mortgage|phentermine|ambien|viagra).*" BadReferrer order deny,allow deny from env=BadReferrer
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla.*NEWT [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Crescent [OR]
+RewriteCond %{HTTP_USER_AGENT} ^CherryPicker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^[Ww]eb[Bb]andit [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebEMailExtrac.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NICErsPRO [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Teleport [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Microsoft.URL [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Wget [OR]
+RewriteCond %{HTTP_USER_AGENT} ^LinkWalker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^sitecheck.internetseer.com [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ia_archiver [OR]
+RewriteCond %{HTTP_USER_AGENT} ^DIIbot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^psbot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailCollector
+RewriteRule ^.* - [F] 

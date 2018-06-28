@@ -1,0 +1,37 @@
+body
+	{
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 15px;
+	}
+
+#main
+	{
+	border: 0px;
+	padding: 10px;
+	padding-top: 0px;
+	width: 903px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	}
+	
+#banner
+	{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 35px;
+	position: relative;
+	}
+
+
+
+/* Multi-column layouts need at least an empty footer with this style in order to not have the columns overflow their container */	
+.formozilla
+	{
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	}

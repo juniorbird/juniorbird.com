@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="generator" content="Adobe GoLive" />
+		<title>Juniorbird.com &mdash; About Me</title>
+		
+		<script src="/js/mtscripts.js" type="text/javascript"></script>
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+	
+	<MTEntries lastn="1">
+
+	<div id="main">
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1><$MTEntryTitle$></h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				
+				<MTTextile><$MTEntryBody$></MTTextile>
+				
+				<MTIfCommentsActive>
+                     <div id="comments" class="comments">
+                        <div class="comments-content">
+                           <h2 class="comments-header">Comments</h2>
+                           <MTComments>
+                           <a id="c<$MTCommentID pad="1"$>"></a>
+                           <div class="comment" id="comment-<$MTCommentID$>">
+                              <div class="comment-content">
+                                 <MTTextile><$MTCommentBody$></MTTextile>
+                              </div>
+                              <p class="comment-footer">
+                                 Posted by:
+                                 <$MTCommentAuthorLink default_name="Anonymous"$> <$MTCommentAuthorIdentity$> |
+                                 <a href="#comment-<$MTCommentID$>"><$MTCommentDate$></a>
+                              </p>
+                           </div>
+                           </MTComments>
+                        </div>
+
+						<h3>Add a Comment</h3>
+                        <MTCommentFields static="1">
+                     </div>
+                     </MTIfCommentsActive>
+			
+			</div>
+			
+			<div id="navbar">				
+				<div id="googlead">
+				<script type="text/javascript"><!--
+				google_ad_client = "pub-1168697838932805";
+				google_ad_width = 160;
+				google_ad_height = 600;
+				google_ad_format = "160x600_as";
+				google_ad_type = "text_image";
+				google_ad_channel ="";
+				google_color_border = "444444";
+				google_color_bg = "333333";
+				google_color_link = "CEFFF3";
+				google_color_text = "FFFFFF";
+				google_color_url = "fefc93";
+				//--></script>
+				<script type="text/javascript"
+				  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+				</div>
+				
+				<p><a href="http://wadearmstrong.com"><$MTBlogCopyright owner="Me"$></a></p>
+						
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+		
+		</MTEntries>
+
+</body>
+
+</html>
