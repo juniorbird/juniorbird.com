@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+		<title>Juniorbird.com &mdash; VersaMail Sucks (and How to Uninstall it)</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Movable Type 4.38" />
+<link rel="start" href="http://juniorbird.com/" title="Home" />
+<script type="text/javascript" src="http://juniorbird.com/js/mtscripts.js"></script>
+
+
+
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31586977-1', 'juniorbird.com');
+  ga('send', 'pageview');
+
+</script>
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1>VersaMail Sucks (and How to Uninstall it)</h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				<p class="date">Published May 27, 2006</p>
+			
+				
+				
+				<p>Like many people who got a Treo, I was at least somewhat excited that I could sync my e-mail with Outlook using the built-in VersaMail program. While I&#8217;m far too cheap to pay for the unlimited data transmission plan that would allow me to send and receive mail over the cell network, I definitely wanted to sync mail I wanted to keep around for reference with my Treo. Unfortunately, VersaMail failed miserably, sucked completely, and, virus-like, was virturally impossible to disable or uninstall.</p>
+
+<p>VersaMail must truly be one of the worst-engineered programs I&#8217;ve encountered, as the task I set for it was entirely trivial. I wanted to sync my inbox &#8212; which, since I&#8217;m an <a href="http://www.43folders.com/izero/">inbox zero</a> kind of guy, typically contains between 0 and 12 items, with a total of 2-4 attachments  &#8212; as well as my outbox, and a folder in which I dropped a few key reference e-mails, say, 8, with 2 attachments. Yet, about a third of the time, VersaMail would stall during synchronization.</p>
+
+<p>Now, when you sync a Treo (or any other Palm handheld), everything gets synced serially, one program after the next. VersaMail was somewhere in the middle there in syncing, so, if the sync stalled, data wouldn&#8217;t be exchanged between my laptop and my Treo. Then I&#8217;d get out away from my laptop and want to make a note or look something up and it wouldn&#8217;t be there &#8212; or have to refer to my Treo when I was sitting in front of my laptop. <span class="caps">OK, </span>there was no data loss, but VersaMail&#8217;s suckiness definitely inconvenienced me, and I definitely was afraid that a stall would eventually destroy data (if you&#8217;re a fan of my <a href="http://juniorbird.com/foto/archives.html">moblog</a>, it hasn&#8217;t been updated because my Treo&#8217;s sync regularly failed before it got my photos off my phone).</p>
+
+<p>So, frustrated, I decided to switch to another program. But VersaMail was unwilling to get out of my Treo. First, disabling sync in VersaMail didn&#8217;t stick; the next time I synced my Treo, VersaMail, virus-like, inserted itself back into the pipeline (and, conveniently enough, stalled three times in a row, including with a completely empty inbox). Even when I clicked the magic box to make VersaMail not try to sync, it still launched and threw up a splash screen saying it was doing nothing. Since I didn&#8217;t know what made VersaMail stall, I couldn&#8217;t trust this outcome. But, again like a virus, VersaMail was not kind enough to insert itself into Windows&#8217; Add/Remove Programs Control Panel or to provide its own uninstaller.</p>
+
+<p>Finally, frustrated, I dug into my computer&#8217;s innards to figure out what made this thing sync so that I could manually uninstall it. Turns out that all the sync conduits sit in Program Files\PalmOne\; they&#8217;re just .dlls.  I poked around and finally ended up taking out a file called <span class="caps">VMC</span>onduit.dll, and then the sync disappeared. Who knows what invisible processes associated with VersaMail still sit around &#8212; forum posts on several sites suggest that VersaMail&#8217;s files take up 500k on my handheld and, of course, there&#8217;s no built-in way to remoe these files, or the program, even though I&#8217;ve dumped VersaMail for good.</p>
+
+<p>Oh, and I decided to switch to the delightfully simple and quick-syncing <a href="http://www.handango.com/PlatformProductDetail.jsp?siteId=1&amp;osId=652&amp;platformId=1&amp;productId=146240">MailFolders+</a>.</p>
+				
+				
+
+				
+			
+			</div>
+			
+			<div id="navbar">
+				<p class="prevnext">Previous: <a href="http://juniorbird.com/archive/002633.html">Incipient Dissatisfaction</a></p>
+				<p class="prevnext">Next: <a href="http://juniorbird.com/archive/002640.html">Junior's Man-Crush</a></p>
+				
+				<p>More in <a href="http://juniorbird.com/archive/cat_tech.html">Tech</a></p>										
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+		<title>Juniorbird.com &mdash; Trying Out Vim; or, When the Geek Says "Get Off My Lawn, You Noisy Kids!"</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Movable Type 4.38" />
+<link rel="start" href="http://juniorbird.com/" title="Home" />
+<script type="text/javascript" src="http://juniorbird.com/js/mtscripts.js"></script>
+
+
+
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31586977-1', 'juniorbird.com');
+  ga('send', 'pageview');
+
+</script>
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1>Trying Out Vim; or, When the Geek Says "Get Off My Lawn, You Noisy Kids!"</h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				<p class="date">Published Nov  1, 2011</p>
+			
+				
+				
+				<p>There seems to be an age that people reach at which getting a new computer stops inspiring us to paroxysms of joy and starts making us cranky that things aren&#8217;t all set up just the same as they used to be. I fear I&#8217;ve reached that stage.</p><h3>What&#8217;s the Tech Term for &#8216;Ossuary&#8217;?</h3><p>I like working on Web things. Working on Web things means writing code. Geeks like me write code in programs called text editors &#8212; that is, apps that give you the most tools possible (fancy syntax-based coloring, predictive text completion, powerful find-and-replace, and more) to edit only the simplest kind of file (plain text, no font sizes or bold or even typefaces).</p><p>Being at said more mature stage in my life, I&#8217;ve gotten tired of trying the latest new app or switching when I change from Mac to PC or when they stop developing the <a href="http://en.wikipedia.org/wiki/Macromedia_HomeSite" target="_blank">text editor I&#8217;m used to</a> or whatever. Plus, since I&#8217;m cross-platform now at my <a href="http://tumblr.juniorbird.com/post/11805330303/working-for-the-weekend" target="_blank">new job</a>, I&#8217;d rather appreciate something that I could run on Mac, Windows, and Linux.</p><p>Okay, that&#8217;s a tall order. And, if you&#8217;re a geek, I bet you can guess where this is going. Well, you&#8217;re entirely right. For the rest of you, the story is this: they basically make two powerful, proven text editors that run everywhere: <a href="http://www.gnu.org/s/emacs/" target="_blank">emacs</a> and <a href="http://www.vim.org/" target="_blank">vim</a>. Picking a side in this argument is pretty much like picking a side in Catholic vs. Lutheran or Mets vs. Yankees.</p><p>Naturally, this being a blog, I plan to pick a side.</p><h3>Digression: Far Too Much Backstory</h3><p>So my first exposure to these guys was back in college, when I used a text editor on a <a href="http://www.vaxarchive.org/" target="_blank">Vax</a> to write scripts to do data analysis with <a href="http://www-01.ibm.com/software/analytics/spss/" target="_blank"><span class="caps">SPSS</span></a>. Depending on which specific server you signed on to (which was itself a function of traffic and of which tools you wanted to use on that server), you could edit that script with vim&#8217;s predecessor, vi; emacs; or pico. The server with emacs always had too many users on it, so I never really got a chance to try it out; I usually ended up on the server with vi and pico.</p><p>And I most certainly used pico. Vi has &#8212; vim too &#8212; this quirk: it&#8217;s modal. In one mode, it lets you enter text; in another mode, it gives you powerful tools to edit that text. You&#8217;re in the one mode or the other, which means that it&#8217;s hard to write text when you&#8217;re editing or edit when you&#8217;re writing. I generally hate modal apps and in college I quickly found myself hating vi. Pico, while almost entirely feature-free, at least got out of my way with that mode crap.</p><p>After college I was taken in by the newer-fangled text editors with actual graphical user interfaces and menus and buttons and all that good stuff. There was a long, passionate affair with <a href="http://barebones.com/products/bbedit/" target="_blank"><span class="caps">BBE</span>dit</a> that ended only when I switched to OS X and needed a new version I didn&#8217;t want to buy. There were desultory years spent with <a href="http://macrabbit.com/espresso/" target="_blank">Espresso</a>, which looked good from afar but, close up, was far from good. HomeSite was of course mentioned above. Heck, I was even special buddies with the quirky <a href="http://www.tex-edit.com/" target="_blank">Tex-Edit</a> for quite a while.</p><h3>Back to the Present Choice at Hand</h3><p>So with all that under my belt, you can maybe see why I would be appealed to by an emacs or vim that had been around for thirty-ish years now. Plus, making all of those switches from one tool to the next certainly added up to more time spent learning than I&#8217;d burn learning emacs or vim just the once. So I decided to try the two. But, to be honest, I was pretty sure I already knew how it&#8217;d turn out.</p><p>Now, remember, I hated vi; so I was confident I&#8217;d hate vim too. And emacs sure seemed the right tool in abstract: I&#8217;m past the age at which I&#8217;m excited to see new stuff on my computer, and emacs has the advantage that it&#8217;s actually basically the world&#8217;s most powerful program and you can choose plug-ins and usage methods that actually let you accomplish virtually anything at all using just emacs, so I&#8217;d never need to learn another program again. (I&#8217;m pretty sure there&#8217;s an emacs web server out there somewhere, and I think they have an emacs first-person shooter as well.) Plus, you make it do all these awesome things by hitting control-something and <em>typing in what you want it to do</em>. Easy-to-remember and, actually, sounds just like a bigger version of my beloved <a href="http://www.obdev.at/products/launchbar/index.html" target="_blank">LaunchBar</a>.</p><p>So it was much to my surprise that, ten minutes into the tutorial, I&#8217;d already developed a deep loathing for emacs. I had to do <em>that</em> to move the cursor? <em>That</em> to edit the text? Remember <em>that</em> four-key combination to do the other everyday task? No thanks.</p><p>Another twenty minutes later, I was having great fun with vim (to the extent that one can have fun with a tutorial, anyway). All of a sudden I was starting to understand why I would want a text editor that actually was designed around <em>editing</em> text separately from <em>writing</em> it. I realized that vim may be crazy, but it&#8217;s my kind of crazy.</p><h3>Tl;Dr; What&#8217;d You Choose Now?</h3><p>So I decided to do the only smart thing: learn the hell out of vim by customizing it. Since it runs on every platform, I got it up and running at work, too. Then I set said customizations up on <a href="https://github.com/juniorbird" target="_blank">github</a> so that I could keep them synced between home and work.</p><p>Thanks to the magic of the internet, you can read all about my progress with vim here and laugh both at my work practices and at the code I write. So, enjoy. And soon enough, enjoy my blog entry on <em>A Month With Vim</em> or <em>Switching to Vim for <span class="caps">GUI</span> Geeks</em> or something like that. And, of course, if you&#8217;re a vim user (or an emacs buff who thinks I made a horrible error), give me your hot tips here so that I can put them in my .vimrc straight away!</p>
+				
+				
+
+				
+			
+			</div>
+			
+			<div id="navbar">
+				<p class="prevnext">Previous: <a href="http://juniorbird.com/archive/004136.html">Working For the Weekend</a></p>
+				<p class="prevnext">Next: <a href="http://juniorbird.com/archive/004134.html">Just Call Me the Battleship Maine</a></p>
+				
+				<p>More in <a href="http://juniorbird.com/archive/cat_tech.html">Tech</a></p>										
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>

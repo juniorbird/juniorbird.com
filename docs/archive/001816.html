@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+		<title>Juniorbird.com &mdash; How To Show Entries From Multiple Blogs on Your Archive Pages in Movable Type</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Movable Type 4.38" />
+<link rel="start" href="http://juniorbird.com/" title="Home" />
+<script type="text/javascript" src="http://juniorbird.com/js/mtscripts.js"></script>
+
+
+
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31586977-1', 'juniorbird.com');
+  ga('send', 'pageview');
+
+</script>
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1>How To Show Entries From Multiple Blogs on Your Archive Pages in Movable Type</h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				<p class="date">Published Jan 15, 2006</p>
+			
+				
+				
+				<p>If you check out the monthly and category archives below, you&#8217;ll notice that the formerly separate moblog, linkblog, and diary parts of this site share the same archive pages. A lot of blogs out there have just this kind of content, but store it completely seperately; if you&#8217;d like to have posts from your moblog, linkblog, and blog or diary, all on the same archive page, and are using Movable Type, you can do it by following the instructions below.</p>
+
+<h3>Assumptions</h3>
+
+<p>So, first thing, there are a few assumptions I&#8217;m going to make here. The first assumption is that you&#8217;re running Movable Type 3.2 &#8212; if you&#8217;re not, you need to upgrade to make this work. The second is that you have <span class="caps">PHP </span>available (although you could use any other language, if you know it, I&#8217;ll be providing code in <span class="caps">PHP </span>here). Third, I&#8217;m assuming that you&#8217;re publishing your pages statically, not dynamically (everything should work on dynamic pages, but I haven&#8217;t tested it). Fourth, I&#8217;m assuming that your host runs Apache, or some other Web server that has an .htaccess-type redirection syntax. Finally, I&#8217;ll assume that you&#8217;re comfortable editing your templates in the <a href="http://www.chami.com/html-kit/">text</a> <a href="http://www.barebones.com/products/bbedit/index.shtml">editor</a> <a href="http://www.jedit.org/">of</a> <a href="http://www.codingmonkeys.de/subethaedit/">your</a> <a href="http://www.itworld.com/AppDev/575/swol-1095-software/">choice</a>.</p>
+
+<h3>Terminology</h3>
+
+<p>Throughout this entry, we&#8217;ll refer to:</p>
+
+
+<ul>
+<li>Master Blog, your main blog and the one that generates the home page of your site; for most people this will be a diary-like blog.</li>
+<li>Secondary Blog, which will generally be a linkblog, blogroll, moblog, etc.</li>
+<li>Archive Pages, which always refer to the Master Blog&#8217;s archives</li>
+</ul>
+
+
+
+<h3>The Procedure</h3>
+
+
+<ol>
+<li>Category Name Unification</li>
+<li>Change Your Archive Path</li>
+<li>Unified Monthly Archives Using MT</li>
+<li>Unified Category Archives Using <span class="caps">PHP</span></li>
+<li>One <span class="caps">RSS</span> Feed to Rule Them All</li>
+<li>Clean-up With .htaccess</li>
+</ol>
+
+
+
+<h3>1: Category Name Unification</h3>
+
+<p>The first step is to make sure that, to the extent you categorize your blog entries, you have matching categories across all of the blogs whose archives you&#8217;re planning to share. In versions of Movable Type prior to 3.2, you cannot have categories that share the same name, even in different blogs, but 3.2 removes that limitation.</p>
+
+<p>If you have a 1:1 correspondence between categories in different blogs, and you&#8217;re comfortable with a tool like <span class="caps">PHPM</span>yAdmin or the MySQL command-line interface,  you can use that tool to rename categories in the secondary blog to match the master blog. If you&#8217;re not comfortable with <span class="caps">PHPM</span>yAdmin, you&#8217;ll have to create a new category in your secondary blog, with the same name as the category that you&#8217;d like to match in the master blog, and move all of your entries from the old category, without the matching name, over to that new category.</p>
+
+<p>If you have multiple categories in a secondary blog that you&#8217;re planning to show on the same archive page in your master blog, you&#8217;ll need to create a new category in your secondary blog that matches the name of the category you&#8217;d like to match in your master blog. You should then make all of the categories that you&#8217;d like to show on the master archive page subcategories of your new, matching-name category. Finally, you&#8217;ll need to move one of your entries to the top-level category, because MT doesn&#8217;t create archive pages for categories with no entries.</p>
+
+<h3>2: Change Your Archive Path</h3>
+
+<p>This is the crazy part, and you may not need to do it. However, if you didn&#8217;t create the folder your archives are in yourself, but, instead, had MT automatically create it for you, and your Web server is configured in specific ways, then you may not have the priveleges to upload files into your own archive folder in your own Web space. </p>
+
+<p>So, step 0 is just to try to upload any arbitrary file to your archive folder to see if you have the priveleges. If you do, great. If not, you&#8217;ll need to:</p>
+
+
+<ol>
+<li>Create a new archive folder (with a different name than your old folder &#8212; you don&#8217;t have the priveleges to delete or reaname your old folder)</li>
+<li>Set the priveleges on that folder so that everyone can read, write, and execute in it (CHMOD 777, for you command-line geeks)</li>
+<li>Go to your control panel</li>
+<li>Click Settings</li>
+<li>Click Publishing</li>
+<li>Change your archive path to match the folder that you just created</li>
+<li>Rebuild! If there&#8217;s an error, check that you did number 2 right</li>
+</ol>
+
+
+
+<p>Don&#8217;t  worry that we just broke all of your incoming links, we&#8217;ll fix those in the final step.</p>
+
+<h3>3: Unified Monthly Archives Using MT</h3>
+
+<p>I lied, a little bit, in this headline &#8212; we&#8217;ll use a little bit of <span class="caps">PHP </span>as well as some MT to get unified date archives. But, in this case, MT will work for us, because all of the date archives use the same file naming by default, and MT gives us access to that file name.</p>
+
+<p>To get your archive page to use any <span class="caps">PHP </span>code you place in your template, you&#8217;ll need to change the extension of the final, rendered page from the usual .html or .htm to .php. To do this, go to your MT control panel, click the Settings button, choose the Publishing tab, and, under Publishing Preferences, set the File Extension for Archive Files to php. When you rebuild your site, this will change all of your archive files&#8217; extensions to .php, and all of the links generated by MT to these date archives will automatically be updated as well. While this step will break incoming links, we&#8217;ll fix those at the end of the whole process.</p>
+
+<p>Now, MT uses &lt;MTArchiveDate format=&#8221;%Y_%m&#8221;&gt; as its file name for date archives. So, in your master date archive page, where you want the secondary blog archives to appear, just use the syntax:</p>
+
+<p><code><?php include "http://yoursecondaryblog.com/date/archive/path/<MTArchiveDate format="%Y_%m">.html" ?></code></p>
+
+<p>That will cause <span class="caps">PHP </span>to fetch the entire page from your secondary blog at that <span class="caps">URL </span>and insert the html from that page into the master archive page, in place of the line of <span class="caps">PHP </span>code. Now, having one complete html page inside another complete html page probably won&#8217;t turn out too well, so you need to strip down the secondary page (don&#8217;t worry, it&#8217;ll never be shown on its own).</p>
+
+<p>Remember that <span class="caps">PHP </span>will actually include all of the contents of the template for the secondary archive page in the master archive page that is actually displayed, so you should think of the output of the template as just a component of a page, rather than as a stand-alone page. As such, you don&#8217;t need your &lt;head&gt; and &lt;body&gt; elements, or your site&#8217;s header, navbar, etc.; just have the code that lists the month&#8217;s entries in the manner which you prefer. For instance, many will blogs will need just a single &lt;div&gt; containing &lt;MTEntries&gt; in the template for the secondary archive page.</p>
+
+<h3>4: Unified Category Archives Using <span class="caps">PHP</span></h3>
+
+<p>You&#8217;ll use an essentially identical process to set up the category archives, except the <span class="caps">PHP </span>code will change. Start out by changing the file extension setting for the master archive page, then strip down the secondary archive page.</p>
+
+<p>Now, because there are fewer legal characters in a <span class="caps">URL </span>than there are characters you may use in a category name, MT has some set of algorithms it uses to simplify category names to create the filename for the category archive page. I don&#8217;t know what those are, but that&#8217;s ok, we can use <span class="caps">PHP </span>to duplicate the final output. In your master category archive template, instead of the <span class="caps">PHP </span>code shown above use the following:</p>
+
+
+
+
+
+<code><?php</code><br />
+<code>   $archive = $_SERVER['PHP_SELF'];</code><br />
+<code>   include "http://yoursecondaryblog.com/category/archive/path/$archive";</code><br />
+<code>?></code>
+
+
+
+
+
+<p>This code gets the filename of the page, stores that filename in the variable $archive, and then gets the page with the same filename at the <span class="caps">URL </span>you specify (presumably the path to the place your secondary blog stores its category archive pages).</p>
+
+<h3>5: One <span class="caps">RSS</span> Feed to Rule Them All</h3>
+
+<p>If you&#8217;re riding the <span class="caps">RSS </span>bandwagon, you probably want to have just one feed for your entire blog (I&#8217;m sorry about that <span class="caps">RSS </span>thing, by the way, but I guess we&#8217;re stuck with it). Fortunately, there&#8217;s a quick trick to getting content from all of your blogs into one single <span class="caps">RSS </span>feed. First, install <a href="http://www.rayners.org/plugins/multiblog/">MultiBlog</a>. Then, create a new blog just for your <span class="caps">RSS </span>feed. Prepare your <span class="caps">RSS </span>feed template(s) as normal, but, around the &lt;MTEntries&gt; tag, include the new &lt;MTMultiBlog&gt; tag. Using <span class="caps">MTM</span>ultiBlog, set up this <span class="caps">RSS </span>blog to rebuild when either the master blog or any of the secondary blogs are rebuilt.  Please read the <span class="caps">MTM</span>ultiBlog documentation for more information, instructions, and syntax.</p>
+
+<p>It&#8217;s true that nothing points to this rss-only blog, but we&#8217;ll fix that in the last step. There&#8217;s sure a lot to be done in that last step!</p>
+
+<h3>6: Clean Up With <span class="caps">RSS</span></h3>
+
+<p>Finally, we&#8217;re on the last step &#8212; cleaning up after the mess we&#8217;ve left. This mess consists of:</p>
+
+
+<ul>
+<li>When changing categories in Step 1, if any categories were renamed, incoming links to those category pages may be broken</li>
+<li>If we changed the archive path in Step 2, incoming links to archive pages have been broken</li>
+<li>Now that we created unified archives in Steps 3 and 4, we no longer want to have links leading to secondary blog archive pages</li>
+<li>Automatic discovery of the <span class="caps">RSS </span>feed is broken because the feed is at an unexpected location</li>
+</ul>
+
+
+
+<p>We&#8217;ll fix all of these problems using .htaccess. As mentioned at the beginning of this entry, this method relies on .htaccess, so if you&#8217;re on Windows you have a problem; there are .htaccess-like tools for <span class="caps">IIS, </span>so you could ask your host to install and run one; alternatively, you could use small <span class="caps">ASP </span>scripts to duplicate the below syntax and then Server.Transfer the user to the desired page. I leave that as an exercise for the reader.</p>
+
+<p>If you don&#8217;t already have an .htaccess file, create a new, blank text document and put the following at the top:</p>
+
+<p><code>Options +FollowSymlinks</code><br />
+<code>RewriteEngine on</code></p>
+
+<p>To fix any renamed category from Step 1, use the following syntax:<br />
+<code>Redirect /archive/oldpage.html http://example.com/archive/newpage.php</code><br />
+Where oldpage is the old archive page name (generated by MT) and newpage is the new archive page name (also generated by MT &#8212; you may have to follow some links on your site to find out the right page names).</p>
+
+<p>To fix the archive path changed in Step 2, use the following syntax:<br />
+<code>RewriteRule ^archives/(.*).html(.*) http://example.com/archive/$1.php$2 [r=301,nc]</code><br />
+Where the first path starts with an ^ then contains the path from the root to the archive folder, then a (.*) then your old file extension and then another (.*), and the <span class="caps">URL </span>is the <span class="caps">URL </span>to your new archive path, with the exact page names replaced with the $1 and $2 characters ($1 inserts whatever was matched by the first (.*) and $2 the second).</p>
+
+<p>To fix the unified archives created in Steps 3 and 4, use the following syntax:<br />
+<code>Redirect /archive/oldpage.html http://example.com/archive/newpage.php</code><br />
+Where oldpage is the old archive page name (generated by MT) and newpage is the new archive page name (also generated by MT &#8212; you may have to follow some links on your site to find out the right page names).</p>
+
+<p>To make everything except Firefox autodiscover the <span class="caps">RSS </span>feed, use the following syntax:<br />
+<code>Redirect /index.rdf http://example.com/rss/index.rdf [r=301,nc]</code><br />
+Where the full <span class="caps">URL </span>is the full <span class="caps">URL </span>of the <span class="caps">RSS </span>feed that you want people to see.</p>
+
+<p>And that&#8217;s it! Now your unified site should work. Enjoy it!</p>
+				
+				
+
+				<div id="comments" class="comments">
+
+
+    
+    
+        
+    <h2 class="comments-header">1 Comment</h2>
+    <div class="comments-content">
+        
+        <div id="comment-701" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <a class="commenter-profile" href="http://www.myspace.com/harlykwin714"><img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" /></a>
+        
+                            <span class="vcard author"><a title="http://www.myspace.com/harlykwin714" href="http://www.myspace.com/harlykwin714" rel="nofollow">harlykwin714</a></span>
+        
+                            | <a href="http://juniorbird.com/archive/001816.html#comment-701"><abbr class="published" title="2006-01-15T05:22:18-08:00">January 15, 2006  5:22 AM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>um sure  ;)</p>
+
+<p>im sure thats totally useful, its moreso hot than anything, tho</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        
+    
+
+
+    
+    
+
+
+</div>
+
+
+			
+			</div>
+			
+			<div id="navbar">
+				<p class="prevnext">Previous: <a href="http://juniorbird.com/archive/002184.html">Serious Worries</a></p>
+				<p class="prevnext">Next: <a href="http://juniorbird.com/archive/002191.html">Well, That's a Relief.</a></p>
+				
+				<p>More in <a href="http://juniorbird.com/archive/cat_meta.html">Meta</a></p>										
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>

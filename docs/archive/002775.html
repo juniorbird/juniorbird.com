@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+		<title>Juniorbird.com &mdash; Will Somebody Please Explain to Me What the SVN vs. CVS Thing Is?</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Movable Type 4.38" />
+<link rel="start" href="http://juniorbird.com/" title="Home" />
+<script type="text/javascript" src="http://juniorbird.com/js/mtscripts.js"></script>
+
+
+
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31586977-1', 'juniorbird.com');
+  ga('send', 'pageview');
+
+</script>
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1>Will Somebody Please Explain to Me What the SVN vs. CVS Thing Is?</h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				<p class="date">Published Sep 27, 2006</p>
+			
+				
+				
+				<p>I discovered <a href="http://www.nongnu.org/cvs/"><span class="caps">CVS</span></a> at the very beginning of this century, when I was doing Web dev. Getting past revisions? <a href="http://en.wikipedia.org/wiki/Diff">Diff</a>? Little notes on what changes I&#8217;d made? Life-saver. Even after leaving the industry, I kept much of my work in <span class="caps">CVS, </span>because revisions and branching are useful even for binary file formats, such as Word .docs or Photoshop .psds.</p>
+
+<p>But I&#8217;ve been fooling with <a href="http://www.rubyonrails.org/">Ruby on Rails</a> and it seems like all the cool kids are using <a href="http://subversion.tigris.org/">Subversion</a> these days. I&#8217;m probably going to have to grab myself a good <span class="caps">SVN </span>client anyway; should I just switch to Subversion for all my version control needs? I currently use <a href="http://www.tortoisecvs.org/">TortoiseCVS</a> to make my <span class="caps">CVS </span>live easy, and it looks like <a href="http://tortoisesvn.tigris.org/">TortoiseSVN</a> is similarly easy-to-use.</p>
+
+<p>What does switching to <span class="caps">SVN </span>get me? Is it really <em>that</em> much easier? Can I easily migrate my <span class="caps">CVS </span>repositories to <span class="caps">SVN </span>and keep all of my past revisions? What have people&#8217;s experiences been with the two technologies?</p>
+
+<p>I know this is a pretty obtuse entry but I&#8217;m also pretty sure that there&#8217;s at least two regular readers who can answer all these questions.</p>
+				
+				
+
+				<div id="comments" class="comments">
+
+
+    
+    
+        
+    <h2 class="comments-header">1 Comment</h2>
+    <div class="comments-content">
+        
+        <div id="comment-964" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" />
+        
+                            <span class="vcard author">geoff</span>
+        
+                            | <a href="http://juniorbird.com/archive/002775.html#comment-964"><abbr class="published" title="2006-09-30T10:51:58-08:00">September 30, 2006 10:51 AM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>I actually just recently switched from CVS to SVN. Switching <strong>is</strong> easy. There&#8217;s a tool called cvs2svn, I think, which will do the conversion and keep all the log information.</p>
+
+<p>SVN has some neat features, and you may enjoy its handling of binary files, since you say you store those under source control currently.</p>
+
+<p>Also, commits are atomic, which means that rolling back changes to a non-broken revision is simpler. Not sure how useful that is for your purposes, but for a build environment, it can be very handy. </p>
+
+<p>For a few weeks after you switch, you will want to type &#8216;cvs&#8217; instead of &#8216;svn&#8217; if you&#8217;re using the command line client. So it&#8217;s good to disable cvs as soon as you switch too. :) </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        
+    
+
+
+    
+    
+
+
+</div>
+
+
+			
+			</div>
+			
+			<div id="navbar">
+				<p class="prevnext">Previous: <a href="http://juniorbird.com/archive/002772.html">The Affair of the Bottle</a></p>
+				<p class="prevnext">Next: <a href="http://juniorbird.com/archive/002779.html">True Love</a></p>
+				
+				<p>More in <a href="http://juniorbird.com/archive/cat_will_somebody_please_explain_to_me.html">Will Somebody Please Explain To Me...</a></p>										
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+		<title>Juniorbird.com &mdash; How to Assign a Drive Letter to an Airport Disk on Windows XP</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Movable Type 4.38" />
+<link rel="start" href="http://juniorbird.com/" title="Home" />
+<script type="text/javascript" src="http://juniorbird.com/js/mtscripts.js"></script>
+
+
+
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<style type="text/css">
+			@import '/css/individual.css';
+		</style>
+	</head>
+	
+	<body>
+
+	<div id="main">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31586977-1', 'juniorbird.com');
+  ga('send', 'pageview');
+
+</script>
+	
+		<div id="banner">
+				
+			<div id="where">
+				<h1>How to Assign a Drive Letter to an Airport Disk on Windows XP</h1>
+			</div>
+			
+			<div id="home">
+
+				<a href="/"><img src="/images/junior.gif" alt="juniorbird.com"/></a>
+				
+			</div>
+			
+			<div class="formozilla"></div>
+			
+		</div>
+		<div id="content">
+			
+			<div id="words">
+				<p class="date">Published Nov  2, 2009</p>
+			
+				
+				
+				<p>I&#8217;ve been using a Time Capsule to back up my Mac for some time now, and have been very satisfied. I was wishing that I could run some kind of over-the-air backup for my wife&#8217;s laptop, which runs Windows <span class="caps">XP, </span>too. So I attached a <span class="caps">USB </span>hard drive to the Time Capsule, and tried to mount that on the Windows XP laptop. First I did it the wrong way, and there was much sadness. Then I did it the right way, and life was easy. I couldn&#8217;t find a description of how to do it right in a quick Google search, so here&#8217;s my story. It&#8217;s probably true for an Airport Extreme Base Station too, since that and the Time Capsule are similar.</p>
+
+<h3>The Wrong Way</h3>
+
+<p>Apple advertises that you can <a href="http://www.apple.com/airportextreme/features/harddrivesharing.html">share disks attached to its wireless routers using the AirPort Disk Utility</a>, if the clients are either Windows machines or older Macs. So I downloaded the AirPort Disk Utility, ran it, and easily mounted the disks.</p>
+
+<p>Then I restarted, and the drive letters assigned to the disks changed. Obviously, that would be a problem if I tried to run backup software, which would try to copy files to a given drive that might or might not be there.</p>
+
+<h3>The Right Way</h3>
+
+<p>So away went the AirPort Disk Utility, and instead I:</p>
+
+
+<ol>
+<li>Went to the <strong>Start Menu</strong>, and opened <strong>My Computer</strong></li>
+<li>From the <strong>Tools</strong> menu, selected <strong>Map Network Drive</strong></li>
+<li>Picked the <strong>Drive Letter</strong> I wanted</li>
+<li>For the <strong>Folder</strong>, typed in <strong>&#92;[IP Address of Time Capsule]\[Drivename]</strong> &#8212; so, if your Time Capsule was at 192.168.1.1, and your backup drive was named George, you&#8217;d type &#92;192.168.1.1\George</li>
+<li>Hit <strong>Finish</strong>. And there was the drive!</li>
+</ol>
+
+
+
+<p>So, if you want to consistently connect your computer running Windows XP to a <span class="caps">USB </span>drive attached to a Time Capsule (and probably and Airport Extreme Base Station), you need to do it through Windows <span class="caps">XP, </span>and not through the AirPort Disk Utility. Simple!</p>
+				
+				
+
+				<div id="comments" class="comments">
+
+
+    
+    
+        
+    <h2 class="comments-header">5 Comments</h2>
+    <div class="comments-content">
+        
+        <div id="comment-1477" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <a class="commenter-profile" href="http://profile.typekey.com/auros"><img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" /></a>
+        
+                            <span class="vcard author"><a title="http://profile.typekey.com/auros" href="http://profile.typekey.com/auros" rel="nofollow">Auros</a></span>
+        
+                            | <a href="http://juniorbird.com/archive/003846.html#comment-1477"><abbr class="published" title="2009-11-02T22:19:28-08:00">November  2, 2009 10:19 PM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>I&#8217;m unclear on why you would need an external USB drive.  Are you backing up so much stuff to the Capsule that you can&#8217;t handle multiple machines on it?</p>
+
+<p>In any case, there&#8217;s step-by-step instructions available <a href="http://www.foreverwarm.com/using-time-capsule-with-a-windows-pc/" rel="nofollow">here</a> on how to use Bonjour to backup a Windows machine to the Capsule&#8217;s internal drive&#8230;</p>
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        <div id="comment-1478" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <a class="commenter-profile" href="http://profile.typekey.com/auros"><img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" /></a>
+        
+                            <span class="vcard author"><a title="http://profile.typekey.com/auros" href="http://profile.typekey.com/auros" rel="nofollow">Auros</a></span>
+        
+                            | <a href="http://juniorbird.com/archive/003846.html#comment-1478"><abbr class="published" title="2009-11-02T22:27:13-08:00">November  2, 2009 10:27 PM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>Oh, also &#8212; did Windows switch from using double-backslash to double-forwardslash for referencing network locations?  I haven&#8217;t really been using Windows much for a while, but definitely the last time I was using XP, the beginning of network drives was &#8220;whack whack&#8221;.  (The folks I worked with at MS referred to the backslash as &#8220;whack&#8221;.  There are a lot of backslashes in MS-land, so you <i>really</i> need a shorter name for it&#8230;)</p>
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        <div id="comment-1479" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <a class="commenter-profile" href="http://profile.typekey.com/juniorbird"><img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" /></a>
+        
+                            <span class="vcard author"><a title="http://profile.typekey.com/juniorbird" href="http://profile.typekey.com/juniorbird" rel="nofollow">juniorbird</a></span>
+        
+                            | <a href="http://juniorbird.com/archive/003846.html#comment-1479"><abbr class="published" title="2009-11-02T23:31:09-08:00">November  2, 2009 11:31 PM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>You are totally correct about the slashes vs. backslashes; I fixed it in the entry so as not to screw up anyone who comes here via google.</p>
+
+<p>There were two reasons I wanted to use a drive hanging off the Time Capsule:</p>
+
+
+<ol>
+<li>I bought the small Time Capsule, and I was greedy to keep that little space for my own nicely-versioned Time Machine backup</li>
+<li>I had an extra drive lying around and was looking for a good use for all that space</li>
+</ol>
+
+
+
+<p>I&#8217;ll allow that both are kind of silly.</p>
+
+<p>When I tried essentially what they described, as in my &#8220;Wrong Way&#8221; section, I ended up with a drive that changed assigned letters between boots &#8212; a problem if I wanted to use backup software that referred to drive letter, rather than UNC path. So I tried the other way, and got a static drive letter between reboots.</p>
+
+<p>(Maybe the real problem was that I needed smarter backup software.)</p>
+
+<p>Anyway, the point is: my google-fu didn&#8217;t turn up the result you suggested, so hopefully this entry is written such that, should I ever need to figure all this out again, google will serve me up this page as the result.</p>
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        <div id="comment-1481" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <a class="commenter-profile" href="http://profile.typekey.com/auros"><img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" /></a>
+        
+                            <span class="vcard author"><a title="http://profile.typekey.com/auros" href="http://profile.typekey.com/auros" rel="nofollow">Auros</a></span>
+        
+                            | <a href="http://juniorbird.com/archive/003846.html#comment-1481"><abbr class="published" title="2009-11-03T09:32:02-08:00">November  3, 2009  9:32 AM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>Hmm.  I need to set up Xta&#8217;s drive to backup to my Time Capsule some time in the next week or so &#8212; I&#8217;ll try to remember to let you know whether the Windows Airport utility works right on her machine (Vista) to get a stable drive letter, and any magic tweaks I discover in the process&#8230;</p>
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        <div id="comment-1484" class="comment">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta">
+                        <span class="byline">
+                            <a class="commenter-profile" href="http://profile.typekey.com/auros"><img alt="Author Profile Page" src="http://juniorbird.com/mt-static/images/comment/typepad_logo.png" width="16" height="16" /></a>
+        
+                            <span class="vcard author"><a title="http://profile.typekey.com/auros" href="http://profile.typekey.com/auros" rel="nofollow">Auros</a></span>
+        
+                            | <a href="http://juniorbird.com/archive/003846.html#comment-1484"><abbr class="published" title="2009-11-11T22:59:00-08:00">November 11, 2009 10:59 PM</abbr></a>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>So, mapping to a drive letter with Map Network Drive seems to work for her, but so far she hasn&#8217;t been able to persuade the Windows backup utility to actually backup to the drive.  Haven&#8217;t tried using Airport Utility yet.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        
+    
+
+
+    
+    
+
+
+</div>
+
+
+			
+			</div>
+			
+			<div id="navbar">
+				<p class="prevnext">Previous: <a href="http://juniorbird.com/archive/003845.html">Pavlov's Resort</a></p>
+				<p class="prevnext">Next: <a href="http://juniorbird.com/archive/003847.html">My Martini Glasses Are My Love</a></p>
+				
+				<p>More in <a href="http://juniorbird.com/archive/cat_tech.html">Tech</a></p>										
+			</div>
+			
+			<div id="formozilla"></div>
+		</div>
+		</div>
+
+</body>
+
+</html>
